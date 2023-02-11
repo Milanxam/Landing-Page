@@ -1,0 +1,158 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+img { box-sizing: content-box; }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    --color: #d77b81;
+    --text-color: rgb(255, 255, 255);
+    --call-color: #4e97f6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color);
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    gap: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(231, 231, 231);
+}
+
+.logo {
+    font-size: large;
+    font-weight: 900;
+}
+
+.head {
+    display: flex;
+    gap: 48px;
+}
+
+.head-text {
+    margin-left: 1em;
+}
+
+.head-text p {
+    color: var(--text-color);
+    filter: brightness(70%);
+}
+
+img {
+    height: auto;
+    width: 600px;
+    border-radius: 12px;
+}
+
+button {
+    padding: 6px 22px;
+    background-color: var(--color);
+    color: var(--text-color);
+    border-radius: 10px;
+    border: none;
+}
+
+#stretch {
+    background-color: rgb(66, 66, 66);
+    padding: 20px;
+}
+
+.info {
+    margin: 1.5em;
+}
+
+.info-show {
+    display: flex;
+    padding: 2em 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+svg {
+    font-size: 0.6em;
+    height: 40px;
+    fill: var(--color);
+}
+
+.info-show li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 130px;
+}
+
+.info-show li p {
+    text-align: center;
+    filter: brightness(86%);
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    filter: brightness(86%);
+}
+
+.quote {
+    background-color: rgb(108, 108, 108);
+    padding: 30px;
+}
+
+.author {
+    text-align: right;
+}
+
+.action {
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    margin: 3rem 1em;
+    gap: 20px;
+    background-color: var(--call-color);
+    padding: 10px 30px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.action div {
+    flex: 1 2 400px;
+}
+
+.action button ↓{
+    flex: 1 1 150px
+}
+
+.signup-lower {
+    color: var(--call-color);
+    background-color: var(--text-color);
+}
+
+button:hover {
+    filter: brightness(80%);
+}
+
+svg:hover {
+    filter: brightness(70%);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(74, 74, 74);
+    width: 100%;
+    font-size: 12px;
+}
