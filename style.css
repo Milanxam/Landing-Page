@@ -6,10 +6,14 @@ img { box-sizing: content-box; }
 body {
     display: flex;
     flex-direction: column;
-    --color: #d77b81;
+    --color: rgb(255, 134, 134);
+    --color-hover: rgb(255, 134, 134);
     --text-color: rgb(255, 255, 255);
     --call-color: #4e97f6;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    --content-padding: 15%;
 }
 
 .header {
@@ -39,13 +43,15 @@ a {
     font-weight: 900;
 }
 
-.head {
+body .head {
     display: flex;
     gap: 48px;
+    padding-bottom: 4em;
+    box-shadow: 4px 0px 16px 0px rgb(255, 134, 134);
 }
 
-.head-text {
-    margin-left: 1em;
+.head-text h1 {
+    font-size: 38px;
 }
 
 .head-text p {
@@ -53,39 +59,43 @@ a {
     filter: brightness(70%);
 }
 
-img {
+.shadow img {
     height: auto;
     width: 600px;
     border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(255, 134, 134, 0.577);
+    z-index: -1;
+    transition: 0.16s ease;
+}
+
+img:hover {
+    box-shadow: 2px 2px 16px rgb(255, 134, 134);
 }
 
 button {
-    padding: 6px 22px;
+    padding: 10px 28px;
+    margin: 20px 0;
     background-color: var(--color);
     color: var(--text-color);
     border-radius: 10px;
     border: none;
-}
-
-#stretch {
-    background-color: rgb(66, 66, 66);
-    padding: 20px;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
 }
 
 .info {
-    margin: 1.5em;
+    margin: 2em 0;
 }
 
 .info-show {
     display: flex;
-    padding: 2em 0;
+    padding: 2.5em 0;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 svg {
     font-size: 0.6em;
-    height: 40px;
+    height: 50px;
     fill: var(--color);
 }
 
@@ -94,6 +104,14 @@ svg {
     flex-direction: column;
     align-items: center;
     flex: 1 1 130px;
+    padding: 40px 16px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 16px rgb(46, 46, 46);
+    transition: 0.16s ease;
+}
+
+.info-show li:hover {
+    box-shadow: 2px 2px 16px var(--color);
 }
 
 .info-show li p {
@@ -103,17 +121,24 @@ svg {
 
 h2 {
     text-align: center;
-    font-size: 24px;
-    filter: brightness(86%);
+    font-size: 28px;
+    filter: brightness(90%);
+    color: var(--color);
 }
 
 .quote {
     background-color: rgb(108, 108, 108);
     padding: 30px;
+    box-shadow: 2px 2px 30px rgb(32, 32, 32);
+}
+
+.quote em {
+    font-size: 20px;
 }
 
 .author {
     text-align: right;
+    padding-bottom: 20px;
 }
 
 .action {
@@ -126,10 +151,17 @@ h2 {
     padding: 10px 30px;
     border-radius: 10px;
     flex-wrap: wrap;
+    box-shadow: 2px 2px 16px rgba(13, 146, 235, 0.404);
+
 }
 
 .action div {
     flex: 1 2 400px;
+}
+
+h3 {
+    margin: 5px 0;
+    margin-bottom: -5px;
 }
 
 .action button ↓{
@@ -155,4 +187,27 @@ svg:hover {
     background-color: rgb(74, 74, 74);
     width: 100%;
     font-size: 12px;
+}
+
+.header, head, .info, .quote, .footer {
+    padding: 20px var(--content-padding);
+}
+
+.header, 
+.head {
+    background-color: rgb(66, 66, 66);
+    padding: 20px var(--content-padding);
+}
+
+.action {
+    margin: 4em var(--content-padding);
+}
+
+
+.logo:hover {
+    color: var(--color);
+}
+
+a:hover {
+    color: var(--color);
 }
