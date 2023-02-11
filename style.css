@@ -33,6 +33,11 @@ body {
     font-weight: 900;
 }
 
+.logo:hover {
+    filter: brightness(110%);
+    text-shadow: 2px 2px 16px rgba(166, 166, 166, 0.185);
+}
+
 span {
     color:var(--color);
 }
@@ -70,15 +75,12 @@ body .head {
     gap: 48px;
     padding-bottom: 3em;
     padding-top: 3em;
-    box-shadow: 2px 4px 16px 0px rgb(32, 32, 32);
+    box-shadow: 2px 4px 16px 0px rgb(35, 35, 35);
     position: relative;
 }
 
 .head-text {
     flex: 1 1 250px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
 }
 
 .head-text h1 {
@@ -92,6 +94,7 @@ body .head {
 }
 
 .signup {
+    width: 160px;
     font-size: 14px;
     transition: 0.3s ease;
 }
@@ -124,30 +127,10 @@ img:hover {
     box-shadow: 2px 2px 16px rgb(255, 134, 134);
 }
 
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(132% + 1.3px);
-    height: 101px;
-}
-
-.wave .shape-fill {
-    fill: #FFFFFF;
-}
-
-
 .info {
-    margin-top: 0.6em;
+    margin-top: 0px;
     margin-bottom: 1em;
+    padding-top: 0px;
 }
 
 .info-show {
@@ -184,7 +167,7 @@ img:hover {
 
 .info-show li:hover {
     box-shadow: 2px 2px 16px rgb(24, 24, 24);
-    background-color: rgb(43, 43, 43);
+    background-color: #2b2b2b;
 }
 
 .info-show li p {
@@ -198,6 +181,7 @@ img:hover {
     filter: brightness(90%);
     padding-bottom: 0px;
     color: rgb(210, 210, 210);
+    margin-top: 0px;
 }
 
 #card-text {
@@ -260,12 +244,15 @@ h3 {
 .footer {
     text-align: center;
     padding: 8px 0;
-    background-color: rgb(74, 74, 74);
+    background-color: rgb(52, 52, 52);
     width: 100%;
     font-size: 12px;
     color: var(--text-color);
 }
 
+.footer div {
+    filter: brightness(70%);
+}
 
 .header, head, .info, .quote {
     padding: 20px var(--content-padding);
@@ -283,10 +270,50 @@ h3 {
 
 .action {
     margin: 4em var(--content-padding);
+    margin-top: 1.7em;
 }
 
+.footer {
+    text-align: center;
+    padding: 8px 0;
+    background-color: rgb(52, 52, 52);
+    width: 100%;
+    font-size: 12px;
+    color: var(--text-color);
+}
 
-.logo:hover {
-    filter: brightness(110%);
-    text-shadow: 2px 2px 16px rgba(166, 166, 166, 0.185);
+.footer div {
+    filter: brightness(70%);
+}
+
+.spacer {
+    aspect-ratio: 960/85;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    text-shadow: #2b2b2b;
+}
+
+.spacer2 {
+    aspect-ratio: 900/35;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    text-shadow: #2b2b2b;
+}
+
+.layer1 {
+    background-image: url(./wave.svg);
+}
+
+.layer2 {
+    background-image: url(./wavetop.svg);
+}
+
+.layer3 {
+    background-image: url(./wavebot.svg);
 }
