@@ -6,10 +6,10 @@ img { box-sizing: content-box; }
 body {
     display: flex;
     flex-direction: column;
-    --color: rgb(206, 100, 116);
+    --color: #63a4fa;
     --color-hover: rgb(255, 134, 134);
     --text-color: rgb(255, 255, 255);
-    --call-color: #4e97f6;
+    --call-color: #63a4fa;
     background-color: rgb(36, 36, 36);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
@@ -19,13 +19,14 @@ body {
     position: relative;
 }
 
-.header {
+body .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--color);
     z-index: 1;
     box-shadow: 4px 8px 10px 0px rgba(32, 32, 32, 0.357);
+    background-color: #2b2b2b;
 }
 
 .logo {
@@ -188,10 +189,84 @@ img:hover {
     filter: brightness(80%);
 }
 
-.quote {
-    background-color: rgb(108, 108, 108);
+
+
+/*Image and Info section */
+
+
+body .vertical-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-image: linear-gradient(60deg,
+        hsl(240deg 31% 40%) 0%,
+        hsl(246deg 33% 40%) 21%,
+        hsl(253deg 36% 40%) 30%,
+        hsl(259deg 38% 40%) 39%,
+        hsl(266deg 41% 40%) 46%,
+        hsl(272deg 44% 40%) 54%,
+        hsl(278deg 48% 39%) 61%,
+        hsl(285deg 53% 38%) 69%,
+        hsl(291deg 59% 36%) 79%,
+        hsl(297deg 69% 34%) 100%);
+    border-radius: 300px 300px 0px 0px;
+    transition: 0.8s;
+    padding-top: 30px;
+    padding-bottom: 250px;
+}
+
+.vertical-info:hover {
+    border-radius: 160px 160px 0px 0px;
+}
+
+.vertical-info div {
+    display: flex;
+    gap: 30px;
     padding: 30px;
-    box-shadow: 2px 2px 30px rgb(32, 32, 32);
+    flex-wrap: wrap;
+}
+
+.vertical-info div p {
+    font-size: 20px;
+    flex: 1 1 200px;
+    align-self: center;
+}
+
+.vertical-info div img {
+    height: auto;
+    width: 630px;
+    box-shadow: 2px 2px 30px rgba(32, 32, 32, 0.585);
+    transition: 0.5s;
+    border-radius: 0px;
+}
+
+.vertical-info div img:hover {
+    box-shadow: 2px 2px 30px rgba(85, 0, 212, 0.894);
+    border-radius: 40px;
+}
+
+
+.vertical-info #reverse {
+    flex-direction: row-reverse;
+    
+}
+
+
+
+body .quote {
+    background-color: rgb(108, 108, 108);
+    padding: 40px;
+    border-radius: 50px 50px 50px 50px;
+    margin-top: -170px;
+    z-index: 4;
+    box-shadow: 2px 2px 30px rgba(32, 32, 32, 0.585);
+    margin-bottom: 2em;
+    transition: 0.5s;
+}
+
+.quote:hover {
+    border-radius: 70px 70px 70px 70px;
 }
 
 .quote em {
@@ -254,7 +329,7 @@ h3 {
     filter: brightness(70%);
 }
 
-.header, head, .info, .quote {
+.header, head, .info, .quote, .vertical-info {
     padding: 20px var(--content-padding);
 }
 
