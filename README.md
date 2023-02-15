@@ -1,5 +1,5 @@
 ## This is a Landing Page
 
-This should be a Porject to prctice CSS and positioning with flexbox.
+This a Porject to practice CSS and positioning with flexbox.
 
-Site is live at: https://milanxam.github.io/Landing-Page/
+The site is live at: https://milanxam.github.io/Landing-Page/
