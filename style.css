@@ -14,6 +14,7 @@ body {
     --color-hover: rgb(255, 134, 134);
     --text-color: rgb(255, 255, 255);
     --call-color: #63a4fa;
+    --grey-color: #3a3a3a;
     background-color: rgb(36, 36, 36);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -93,7 +94,7 @@ body .head {
 }
 
 .head-text h1 {
-    font-size: 38px;
+    font-size: 44px;
     color: rgb(235, 235, 235);
 }
 
@@ -129,7 +130,7 @@ button {
     width: 660px;
     border-radius: 12px;
     border-radius: 30px;
-    transition: 0.5s ease;
+    box-shadow: var(--shadow-elevation-high2);
 }
 
 .info {
@@ -184,7 +185,7 @@ button {
     font-size: 16px;
 }
 
-.info h2 {
+.heading {
     text-align: center;
     font-size: 32px;
     filter: brightness(90%);
@@ -198,32 +199,39 @@ button {
 }
 
 
-/*Image and Info section */
+/*Image and Info section, gallary */
 
+.vertical-info h1 {
+    text-align: center;
+    font-weight: 900;
+    filter: brightness(20%);
+    font-size: 170px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -30px;
+    letter-spacing: 40px;
+
+}
 
 body .vertical-info {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: #393939;
-    border-radius: 160px;
-    gap: 50px;
-    transition: 0.7s;
-    padding-top: 40px;
-    padding-bottom: 390px;
-    margin-top: 80px;
-    margin-left: 80px;
-    margin-right: 80px;
-    padding-left: 12vh;
-    padding-right: 12vh;
+    gap: 60px;
+    padding: 60px 15vh;
+    margin: 70px;
 }
 
 .vertical-info div {
     display: flex;
+    height: 480px;
     gap: 50px;
-    padding: 30px;
+    padding: 20px;
     flex-wrap: wrap;
+    background-color: var(--grey-color);
+    box-shadow: var(--shadow-elevation-high2);
+    border-radius: 70px;
 }
 
 .vertical-info div p {
@@ -231,6 +239,7 @@ body .vertical-info {
     flex: 1 1 170px;
     align-self: center;
     line-height: 1.9em;
+    filter: brightness(70%);
 }
 
 .item-2 p {
@@ -240,40 +249,28 @@ body .vertical-info {
 .vertical-info div img {
     height: auto;
     width: 630px;
-    transition: 0.5s;
+    border-radius: 60px;
+    box-shadow: var(--shadow-elevation-high2);
 }
 
 .vertical-info #reverse {
     flex-direction: row-reverse;
-    background-color: #4b4b4b;
-    margin: 0 -15vh;
-    padding: 4em 0;
-    padding: 3em 10vh;
-    padding-left: 18vh;
-    padding-right: 18vh;
-    border-radius: 100px;
-    box-shadow: var(--shadow-elevation-high2);
 }
 
-#reverse img:hover {
-    box-shadow: var(--shadow-elevation-high2);
-}
 
+/* qutoe section*/
 
 body .quote {
     background-color: rgb(108, 108, 108);
     margin: 0 6vh;
     padding: 40px 12vh;
-    border-radius: 50px 50px 50px 50px;
-    margin-top: -320px;
-    z-index: 1;
+    border-radius: 10px;
     box-shadow: 2px 2px 30px rgba(32, 32, 32, 0.585);
-    margin-bottom: 2em;
     transition: 0.5s;
 }
 
 .quote:hover {
-    border-radius: 70px;
+    border-radius: 30px;
 }
 
 .quote em {
@@ -286,11 +283,12 @@ body .quote {
     font-weight: 900;
 }
 
+/* action section */
+
 .action {
     display: flex;
     align-items: center;   
     justify-content: space-between;
-    margin: 6rem 1em;
     gap: 20px;
     background-color: var(--call-color);
     padding: 10px 30px;
@@ -306,7 +304,6 @@ body .quote {
 
 h3 {
     margin: 5px 0;
-    margin-bottom: -5px;
 }
 
 .action button ↓{
@@ -352,7 +349,6 @@ h3 {
 
 .action {
     margin: 4em var(--content-padding);
-    margin-top: 7.6em;
 }
 
 .footer {
@@ -402,6 +398,7 @@ h3 {
     background-image: url(./svg/);
 }
 
+/* shadow effects */
 
 :root {
   --shadow-color: 0deg 0% 6%;
@@ -426,20 +423,6 @@ h3 {
     20.2px 59.9px 58.3px -3px hsl(var(--shadow-color) / 0.31),
     28.9px 85.8px 83.5px -3.4px hsl(var(--shadow-color) / 0.27),
     40px 119px 115.8px -3.8px hsl(var(--shadow-color) / 0.22);
-}
-
-body button {
-    box-shadow: var(--shadow-elevation-low);
-}
-
-img {
-    box-shadow: var(--shadow-elevation-medium2);
-    border-radius: 30px;
-}
-
-img:hover {
-    box-shadow: var(--shadow-elevation-high2);
-    filter: brightness(110%);
 }
 
 :root {
