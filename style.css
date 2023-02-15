@@ -10,12 +10,13 @@ img { box-sizing: content-box; }
 body {
     display: flex;
     flex-direction: column;
-    --color: #63a4fa;
+    --color: #9c63e6;
     --color-hover: rgb(255, 134, 134);
     --text-color: rgb(255, 255, 255);
     --call-color: #63a4fa;
     --grey-color: #3a3a3a;
-    background-color: rgb(36, 36, 36);
+    background-color: #242424;
+    --background-color: rgb(36, 36, 36);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -34,12 +35,12 @@ body .header {
     justify-content: space-between;
     color: var(--color);
     z-index: 1;
-    box-shadow: 4px 8px 10px 0px rgba(32, 32, 32, 0.357);
+    box-shadow: var(--shadow-elevation-high2);
     background-color: #2b2b2b;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 2em;
     font-weight: 900;
 }
 
@@ -65,6 +66,7 @@ a {
     text-decoration: none;
     list-style: none;
     color: rgb(231, 231, 231);
+    font-size: 1.2em;
 }
 
 .nav {
@@ -78,6 +80,8 @@ li .nav:hover {
     border-bottom-width: 3px ;
 }
 
+/* main head section */
+
 body .head {
     display: flex;
     justify-content: center;
@@ -89,25 +93,51 @@ body .head {
     position: relative;
 }
 
+.head img {
+    flex: 2 1 400px;
+    height: auto;
+    width: 45em;
+    border-radius: 12px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-elevation-high2);
+    z-index: 2;
+}
+
 .head-text {
-    flex: 1 1 250px;
+    flex: 1 1 220px;
 }
 
 .head-text h1 {
-    font-size: 44px;
+    font-size: 3.5em;
     color: rgb(235, 235, 235);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+        65deg,
+        hsl(287deg 86% 80%) 0%,
+        hsl(280deg 86% 79%) 11%,
+        hsl(273deg 86% 78%) 22%,
+        hsl(267deg 85% 77%) 33%,
+        hsl(260deg 85% 76%) 44%,
+        hsl(253deg 84% 75%) 56%,
+        hsl(245deg 83% 75%) 67%,
+        hsl(237deg 82% 73%) 78%,
+        hsl(230deg 83% 68%) 89%,
+        hsl(223deg 83% 63%) 100%
+    );
 }
 
 .head-text p {
     color: var(--text-color);
     filter: brightness(70%);
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .signup {
-    width: 160px;
-    font-size: 14px;
     transition: 0.3s ease;
+    background-image: var(--gradiant);
+
 }
 
 .signup:hover {
@@ -115,29 +145,20 @@ body .head {
 }
 
 button {
-    padding: 10px 28px;
+    padding: 12px 22px;
     margin: 20px 0;
     background-color: var(--color);
     color: var(--text-color);
-    border-radius: 18px;
+    border-radius: 22px;
     border: none;
     box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+    height: 2.3em;
+    width: 14em;
+    font-size: 1em;
 }
 
-.head img {
-    flex: 2 100 500px;
-    height: auto;
-    width: 660px;
-    border-radius: 12px;
-    border-radius: 30px;
-    box-shadow: var(--shadow-elevation-high2);
-}
 
-.info {
-    margin-top: 0px;
-    margin-bottom: 1em;
-    padding-top: 0px;
-}
+/* Info display cards */
 
 .info-show {
     display: flex;
@@ -149,7 +170,7 @@ button {
 
 .info-svg {
     font-size: 0.6em;
-    height: 52px;
+    height: 6em;
     fill: var(--color);
     transition: 0.3s ease-out;
 }
@@ -164,6 +185,7 @@ button {
     align-items: center;
     gap: 20px;
     flex: 1 1 130px;
+    height: 18em;
     padding: 40px 16px;
     border-radius: 10px;
     transition: 0.3s ease;
@@ -181,22 +203,21 @@ button {
 
 .info-show li p {
     text-align: center;
-    filter: brightness(86%);
-    font-size: 16px;
+    filter: brightness(75%);
+    font-size: 1.2em;
 }
 
 .heading {
     text-align: center;
-    font-size: 32px;
+    font-size: 3em;
     filter: brightness(90%);
     padding-bottom: 0px;
+    margin-bottom: 1.4em;
     color: rgb(210, 210, 210);
     margin-top: 0px;
+    filter: brightness(77%);
 }
 
-#card-text {
-    filter: brightness(80%);
-}
 
 
 /*Image and Info section, gallary */
@@ -205,14 +226,33 @@ button {
     text-align: center;
     font-weight: 900;
     color: #2d2d2d;
-    font-size: 170px;
-    margin: 0;
+    font-size: 1300%;
     padding: 0;
     margin-bottom: -30px;
-    letter-spacing: 36px;
+    letter-spacing: 0.16em;
     text-shadow: var(--shadow-elevation-high);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+   color: rgba(0,0,0,0); 
+
+    text-shadow: 
+    /*
+       This must be the same as page bg in order for this to work.
+       Without SCSS, you would do something like this:
+         .05em .05em .05em rgb(255,255,255,.25),
+    */
+    .05em .05em .05em rgba(36, 36, 36, .25), 
+    /* 
+      For best result, take the color you want, then 
+      make it darker and more saturated so the white 
+      shadow above will boost it up to the proper 
+      apparent value 
+    */
+    0 0 0 hsl(0, 0%, 11%);
 
 }
+
 
 body .vertical-info {
     display: flex;
@@ -221,12 +261,12 @@ body .vertical-info {
     justify-content: center;
     gap: 60px;
     padding: 60px 15vh;
-    margin: 70px;
+    margin: 2vh;
 }
 
 .vertical-info div {
     display: flex;
-    height: 480px;
+    flex: 1 1 480px;
     gap: 50px;
     padding: 20px;
     flex-wrap: wrap;
@@ -236,7 +276,7 @@ body .vertical-info {
 }
 
 .vertical-info div p {
-    font-size: 22px;
+    font-size: 1.4em;
     flex: 1 1 170px;
     align-self: center;
     line-height: 1.9em;
@@ -259,11 +299,12 @@ body .vertical-info {
 }
 
 
-/* qutoe section*/
+/* quote section*/
 
 body .quote {
     background-color: rgb(108, 108, 108);
     margin: 0 6vh;
+    margin-top: 4em;
     padding: 40px 12vh;
     border-radius: 10px;
     box-shadow: 2px 2px 30px rgba(32, 32, 32, 0.585);
@@ -275,13 +316,14 @@ body .quote {
 }
 
 .quote em {
-    font-size: 22px;
+    font-size: 1.4em;
 }
 
 .author {
     text-align: right;
     padding-bottom: 20px;
     font-weight: 900;
+    font-size: 1.2em;
 }
 
 /* action section */
@@ -292,11 +334,10 @@ body .quote {
     justify-content: space-between;
     gap: 20px;
     background-color: var(--call-color);
-    padding: 10px 30px;
+    padding: 30px 50px;
     border-radius: 10px;
     flex-wrap: wrap;
     box-shadow: 2px 2px 16px rgba(13, 146, 235, 0.404);
-
 }
 
 .action div {
@@ -305,10 +346,15 @@ body .quote {
 
 h3 {
     margin: 5px 0;
+    font-size: 1.6em;
 }
 
-.action button ↓{
-    flex: 1 1 150px
+.action div p {
+    font-size: 1.2em;
+}
+
+.action button {
+    flex: 0 1 12em;
 }
 
 .signup-lower {
@@ -399,7 +445,23 @@ h3 {
     background-image: url(./svg/);
 }
 
-/* shadow effects */
+/* shadow effects and gradiants */
+
+body {
+    --gradiant: linear-gradient(
+        65deg,
+        hsl(287deg 86% 80%) 0%,
+        hsl(280deg 86% 79%) 11%,
+        hsl(273deg 86% 78%) 22%,
+        hsl(267deg 85% 77%) 33%,
+        hsl(260deg 85% 76%) 44%,
+        hsl(253deg 84% 75%) 56%,
+        hsl(245deg 83% 75%) 67%,
+        hsl(237deg 82% 73%) 78%,
+        hsl(230deg 83% 68%) 89%,
+        hsl(223deg 83% 63%) 100%
+        );
+}
 
 :root {
   --shadow-color: 0deg 0% 6%;
