@@ -10,7 +10,7 @@ img { box-sizing: content-box; }
 body {
     display: flex;
     flex-direction: column;
-    --color: #9c63e6;
+    --color: #a05cf8;
     --color-hover: rgb(255, 134, 134);
     --text-color: rgb(255, 255, 255);
     --call-color: #63a4fa;
