@@ -1,7 +1,6 @@
 ## This is a Landing Page
 
 This is a project to practice CSS, and positioning with flexbox.
-It could reperesent a nice travel website
 
 The site is live at: https://milanxam.github.io/Landing-Page/
 
