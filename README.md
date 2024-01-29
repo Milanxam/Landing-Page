@@ -2,7 +2,7 @@
 
 A very crude, yet beautiful project to practice CSS, and positioning with flexbox.
 
-The site is live at: https://milanxam.github.io/Landing-Page/
+Visit the live site at: https://milanxam.github.io/Landing-Page/
 
 <br />
 
