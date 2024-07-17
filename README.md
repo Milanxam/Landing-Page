@@ -7,7 +7,7 @@ Visit the live site at: https://milanxam.github.io/Landing-Page/
 <br />
 
 ---
-making some small edits
+making some small 
 
 <br />
 <br />
