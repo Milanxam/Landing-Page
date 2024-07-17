@@ -6,8 +6,7 @@ Visit the live site at: https://milanxam.github.io/Landing-Page/
 
 <br />
 
----
-making   
+---   
 
 <br />
 <br />
